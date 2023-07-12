@@ -3,6 +3,7 @@ import LoginPage from "./Login/LoginPage";
 import HomePage from "./Home/HomePage";
 import Footer from "./Footer/Footer";
 import { UserCRUDContextProvider } from "../context/UserCRUDContext";
+import RegistationPage from "./Register/RegistrationPage";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
           <Routes>
             <Route path="/login" exact element={<LoginPage />}></Route>
             <Route path="/" exact element={<HomePage />}></Route>
+            <Route path="/register" exact element={<RegistationPage />}></Route>
           </Routes>
         </UserCRUDContextProvider>
       </BrowserRouter>
