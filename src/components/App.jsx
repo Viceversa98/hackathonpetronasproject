@@ -8,7 +8,7 @@ import InvitationPage from "./Invitation/InvitationPage";
 
 function App() {
   return (
-    <main className="flex flex-col items-stretch text-center justify-center px-8 lg:px-40 2xl:px-80 bg-slate-200">
+    <main className="flex flex-col items-stretch text-center justify-center px-8 lg:px-40 2xl:px-80 bg-slate-100">
       <BrowserRouter>
         <UserCRUDContextProvider>
           <Routes>
