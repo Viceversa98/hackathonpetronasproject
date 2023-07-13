@@ -10,10 +10,10 @@ import Header from "./Header/Header";
 
 function App() {
   return (
-    <main className="flex flex-col items-stretch text-center justify-center px-8 lg:px-40 2xl:px-80 bg-slate-100">
-      <BrowserRouter>
-        <UserCRUDContextProvider>
+    <BrowserRouter>
+      <UserCRUDContextProvider>
         <Header />
+        <main className="flex flex-col items-stretch text-center justify-center px-8 lg:px-40 2xl:px-80 h-screen bg-slate-100">
           <Routes>
             <Route path="/login" exact element={<LoginPage />}></Route>
             <Route path="/" exact element={<HomePage />}></Route>
@@ -21,12 +21,10 @@ function App() {
             <Route path="/invite" exact element={<InvitationPage />}></Route>
             <Route path="/checklist" exact element={<ChecklistPage />}></Route>
           </Routes>
-          <Footer />
-        </UserCRUDContextProvider>
-      </BrowserRouter>
-
-      
-    </main>
+        </main>
+        <Footer />
+      </UserCRUDContextProvider>
+    </BrowserRouter>
   );
 }
 

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-// import petronas from "../assets/logos/petronas-logo.png";
+import petronas from "../../assets/logos/petronas.png";
 
 function LoginPage() {
   const user = {
@@ -46,11 +46,12 @@ function LoginPage() {
   };
 
   return (
-    <div className="h-screen flex flex-col items-center text-center justify-center px-8 lg:px-40 2xl:px-80 bg-slate-100">
-      <div className="form-control card w-96 bg-primary text-primary-content ">
+    <div className="flex flex-col items-center text-center justify-center px-8 lg:px-40 2xl:px-80 bg-slate-100">
+      <img src={petronas} alt="petronas" width={260} />
+      <div className="form-control card w-96 bg-primary text-primary-content mt-8">
         <div className="card-body text-center justify-center">
           <form onSubmit={loginButton}>
-            <h2 className="card-title mb-4">Login</h2>
+            <h2 className="card-title text-2xl mb-4">Login</h2>
 
             <input
               type="text"
@@ -59,7 +60,7 @@ function LoginPage() {
               onChange={(e) =>
                 setInputs((inputs) => ({ ...inputs, userName: e.target.value }))
               }
-              className="input input-bordered input-primary w-full max-w-xs my-1"
+              className="input input-bordered input-accent w-full max-w-xs my-2"
             />
 
             <input
@@ -69,11 +70,24 @@ function LoginPage() {
               onChange={(e) =>
                 setInputs((inputs) => ({ ...inputs, password: e.target.value }))
               }
-              className="input input-bordered input-primary w-full max-w-xs my-1"
+              className="input input-bordered input-accent w-full max-w-xs my-2"
             />
 
-            <div className="card-actions justify-end">
-              <button className="btn hover:btn-secondary">Login</button>
+            <div>
+              <a href="#" target="_self">
+                <p>Forget your id? </p>
+              </a>
+            </div>
+
+            <div className="card-actions justify-between items-baseline mt-4">
+              <div>
+                <a href="#" target="_self">
+                  <p className="font-semibold">Create account</p>
+                </a>
+              </div>
+              <button className="btn hover:btn-accent active:btn-warning">
+                Login
+              </button>
             </div>
           </form>
         </div>
