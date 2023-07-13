@@ -4,6 +4,7 @@ import HomePage from "./Home/HomePage";
 import Footer from "./Footer/Footer";
 import { UserCRUDContextProvider } from "../context/UserCRUDContext";
 import RegistationPage from "./Register/RegistrationPage";
+import InvitationPage from "./Invitation/InvitationPage";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
             <Route path="/login" exact element={<LoginPage />}></Route>
             <Route path="/" exact element={<HomePage />}></Route>
             <Route path="/register" exact element={<RegistationPage />}></Route>
+            <Route path="/invite" exact element={<InvitationPage />}></Route>
           </Routes>
         </UserCRUDContextProvider>
       </BrowserRouter>
